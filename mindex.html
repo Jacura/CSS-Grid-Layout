@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        CSS GRIDS 2
+    </title>
+    <style>
+        .wrapper{
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+            /* grid-auto-rows: 100px; */
+            grid-auto-rows: minmax(100px,auto);
+        }
+        .wrapper > div{
+            background-color: #eee;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+            background-color: #ddd;
+        }
+        .nested{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            grid-auto-rows: 70px;
+
+        }
+        .nested > div {
+            border: 1px solid rgb(46, 40, 40);
+            padding: 1em;
+            border-radius: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div>Lorem ipsum dolor sit amet consectetur.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis dolorum, aspernatur dolorem harum quia. Velit quo aperiam dolorum illo recusandae quis repudiandae aut rem incidunt omnis esse nemo dignissimos veritatis nostrum ratione, doloremque, odit dicta tenetur vel. Reprehenderit distinctio accusantium, perspiciatis esse fugit voluptates ipsum dignissimos dolorum quia cupiditate eaque natus modi ullam similique tempora molestiae voluptatem saepe sed.</div>
+        <div class="nested">
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+        </div>
+        <div>Lorem ipsum dolor sit amet consectetur.</div>
+        <div>Lorem ipsum dolor sit amet consectetur.</div>
+        <div>Lorem ipsum dolor sit amet consectetur.</div>
+        <div>Lorem ipsum dolor sit amet consectetur.</div>
+        
+    </div>
+
+</body>
+</html>
